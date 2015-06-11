@@ -1,7 +1,16 @@
+body {
+  margin: 0;
+  padding: 30em;
+  font-family: "lato", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  background: #FFF;
+  color: #444;
+  max-width: 40em;
+  border-left: 6px solid;
+}
 
 
-
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6, p, li, blockquote {
   font-family: "Lato", sans-serif;
-  padding-top: 20px;
 }

@@ -1,0 +1,64 @@
+body {
+  color : #ffffff;
+  background: rgba(74, 123 , 157,0.9);
+  line-height: 22px;
+  font-size: 12px;
+  font-family: verdana;
+  text-align: center;
+  margin: 15px 0 15px 0;
+}
+h1 {
+  font-family: cursive;
+  font-size: 40px;
+  background-image: url(images/background.png);
+background-color: #3590F3;
+background-position: top left;
+background-repeat: repeat;
+color: #FFFFFF;
+height: 100px;
+padding-top: 72px;
+border-top: 4px solid #ffffff;
+border-bottom: 4px solid #ffffff;
+}
+h2 {
+  border-bottom: 1px solid #F2F4FF;
+  margin: 10px 0 18px 0;
+}
+
+h4 {
+  margin: 10px 0 8px 0;
+
+}
+
+p {
+  margin: 5px 0 5px 0;
+}
+
+header {
+  padding: 50px 50px 50px 50px;
+}
+
+
+.experience, .other-experience, .education {
+  margin-bottom: 26px;
+}
+
+.photos img {
+  margin: 0px 10px 0px 10px;
+  height: 100px;
+  width: 160px;
+}
+
+.about-me {
+  font-size: 18px;
+  height: 100px;
+  margin-top: 10px;
+
+}
+
+.resume {
+  font-size: 18px;
+  height: 100px;
+  margin-top: 10px;
+
+}
