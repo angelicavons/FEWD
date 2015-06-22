@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="A simple example of how Javascript can manipulate DOM.">
+    	<meta name="keywords" content="General Assembly, Javascript, JS">
+
+		<title>Slider</title>
+
+		<!-- external CSS link -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/nav.css">
+		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="js/slider.js"></script>
+		<script src="js/nav.js"></script>
+	</head>
+<body>
+
+
+	<ul class="navigation">
+	    <li class="nav-item"><a href="#">Home</a></li>
+	    <li class="nav-item"><a href="#">About</a></li>
+	    <li class="nav-item"><a href="#">Gallery</a></li>
+	    <li class="nav-item"><a href="#">Contact</a></li>
+	</ul>
+
+	<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+	<label id="hamburger" for="nav-trigger"></label>
+
+
+
+		<div id="container">
+
+			<div id="slider" class="slider">
+
+					<ul>
+						<li><img src="img/photos/california.jpg"></li>
+						<li><img src="img/photos/marina-del-rey.jpg"></li>
+						<li><img src="img/photos/venice.jpg"></li>
+					</ul>
+			</div>
+
+
+		</div><!-- #container -->
+		<script src="js/app.js"></script>
+	</body>
+</html>
