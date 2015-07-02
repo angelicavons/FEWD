@@ -15,8 +15,11 @@ Element.prototype.Gallery = function(){
    section.innerHTML = ev.target.innerHTML;
    section.style.backgroundImage = ev.target.style.backgroundImage;
    section.style.backgroundRepeat = 'no-repeat';
+   section.style.zIndex = '50';
+
    section.style.backgroundSize = 'contain';
    section.style.backgroundPosition = 'center center';
+   var p =document.createElement('p');
    section.style.height = '100%';
 
    var closeButton = document.createElement('div');
@@ -25,7 +28,7 @@ Element.prototype.Gallery = function(){
    closeButton.addEventListener('click',function(){
        section.style.display = 'none';
    });
-
+   section.children[0].appendChild(p);
    section.appendChild(closeButton);
    container.appendChild(section);
 
@@ -65,6 +68,13 @@ Element.prototype.Gallery = function(){
 
              });
 
+ };
+
+ this.getFilteredList = function(searchTerm) {
+   if (searchTerm) {
+     console.log("I am searching the gallery for: " + searchTerm);//XXX
+   }
+   return;
  };
 
  this.connect = function(){

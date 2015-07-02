@@ -1,0 +1,26 @@
+
+<head>
+    <script type="text/javascript">
+        function OnButtonDown (button) {
+            button.style.color = "#ff0000";
+        }
+        function OnButtonUp (button) {
+            button.style.color = "#000000";
+        }
+
+        function Init () {
+            var button = document.getElementById ("testButton");
+            if (button.addEventListener) {
+                button.addEventListener ("mousedown", function () {OnButtonDown (button)}, false);
+                button.addEventListener ("mouseup", function () {OnButtonUp (button)}, false);
+            }
+
+            }
+        }
+    </script>
+</head>
+<body onload="Init ()">
+    Click button.
+    <br />
+    <button id="testButton">here</button>
+</body>

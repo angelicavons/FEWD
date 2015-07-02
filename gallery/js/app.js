@@ -3,6 +3,12 @@ sliderElement.Slider();
 
 var navElement = document.getElementById('nav');
 navElement.Nav();
+navElement.showSection('gallery');
 
 var galleryElement = document.getElementById('gallery');
-gallery.Gallery();
+galleryElement.Gallery();
+
+var contactElement = document.getElementById('contact');
+contactElement.Contact("Contact");
+
+var searchElement = document.getElementById('search');
