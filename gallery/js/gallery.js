@@ -3,12 +3,15 @@ Element.prototype.Gallery = function(){
 
  var gallery = this;
  var ul = gallery.children[0];
- var photos = {};
+ var photos = new Object();
+ var container = document.getElementById('container');
+
+
  // Define global variables(
 
  this.singlePhoto = function(ev) {
 
-     console.log(ev.target.style.backgroundImage);
+
 
    var section = document.createElement('section');
    section.classList.add('single-photo');
@@ -32,17 +35,31 @@ Element.prototype.Gallery = function(){
    section.appendChild(closeButton);
    container.appendChild(section);
 
-   //   var singlePhoto = document.createElement('div');
-   //   var modal = document.getElementsByTagName("body")[0];
-   //
-   //       singlePhoto.classList.add('single-photo');
-   //       modal.appendChild(singlePhoto);
-   //
-   //   singlePhoto.innerHTML = ev.srcElement.innerHTML;
-   //
-   // var x = ev;
-   // console.log(x);
 
+ };
+
+ this.filterPhotos = function(query) {
+for(var i=0;i<ul.children.length; i++) {
+  var tags = ul.children[i].dataset.tags;
+  var arr = tags.split(',');
+  var matched = false;
+
+  arr.forEach(function(tag){
+    if)tag === query){
+      ul.children[i].style.display = "block";
+      matched = true;
+
+    }
+  });
+      if(matched === false){
+        ul.children[i].style.display = 'none';
+      }
+
+if(query === 'all') {
+  ul.children[i].style.display = 'block';
+}
+
+}
 
  };
 
@@ -50,7 +67,7 @@ Element.prototype.Gallery = function(){
      // add logic for each photo in here
              photos.forEach(function(photo,index){
 
-                 // console.log(photo);
+                 console.log(photo);
                  var li = document.createElement('li');
 
                  li.style.backgroundImage = 'url("'+photo.image_url+'")';
@@ -63,38 +80,25 @@ Element.prototype.Gallery = function(){
                      '</h6></div><div class="stats"><div>'+
                      photo.rating+'</div></div>'+
                      '</div>';
-                 li.addEventListener('mousedown',gallery.singlePhoto);
+
+                     var tags = [];
+
+                     photo.tags.forEach(function(tag){
+                       tags.push(tag.toLowerCase());
+                     });
+                     gallery.allTheTags.push(tags);
+                li.dataset.tags = tags;
+              li.dataset.description = photo.description;
+
+                 li.addEventListener('click',gallery.singlePhoto);
+
                  ul.appendChild(li);
 
              });
 
  };
 
- this.getFilteredList = function(searchTerm) {
-   if (searchTerm) {
-     console.log("I am searching the gallery for: " + searchTerm);//XXX
-   }
-   return;
- };
 
- this.connect = function(){
-     var xhr = new XMLHttpRequest();
-     xhr.open("GET", "./models/popular-photos.json", true);
-     xhr.setRequestHeader("Content-Type", "application/json");
-
-     xhr.onreadystatechange = function() {
-       if (xhr.readyState == 4) {
-             var response = JSON.parse(xhr.responseText);
-             // console.log(response);
-             photos = response.photos
-             gallery.layoutPhotos();
-             // console.log(this);
-         // JSON.parse does not evaluate the attacker's scripts via xhr.responseText.
-
-       }
-     }
-     xhr.send();
- };
 
 
  this.init = function(){

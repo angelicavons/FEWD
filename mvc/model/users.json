@@ -1,0 +1,38 @@
+{
+  "users" : [{
+    "name": "Steve",
+    "age": "32",
+    "job": "Software Developer",
+    "isAdmin": true
+  },
+  {
+    "name": "Joe",
+    "age": "45",
+    "job": "Account Manager",
+    "isAdmin": false
+  },
+  {
+    "name": "Susanne",
+    "age": "30",
+    "job": "Designer",
+    "isAdmin": false
+  },
+  {
+    "name": "Paul",
+    "age": "30",
+    "job": "Product Manager",
+    "isAdmin": false
+  },
+  {
+    "name": "Alan",
+    "age": "25",
+    "job": "Copywriter",
+    "isAdmin": false
+  },
+  {
+    "name": "Evan",
+    "age": "40",
+    "job": "Producer",
+    "isAdmin": false
+  }]
+}
